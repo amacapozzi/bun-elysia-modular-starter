@@ -9,6 +9,16 @@
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
+  
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "elysia": "latest"
   },
